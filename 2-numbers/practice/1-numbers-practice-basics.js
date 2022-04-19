@@ -20,9 +20,9 @@ console.log(y + z)
 
 // Create three numbers, assign them to variables and subtract the smaller two from the largest
 
-let alpha = 20
-let beta = 300
-let gamma = 57
+const alpha = 20
+const beta = 300
+const gamma = 57
 
 // Check it worked by logging to the console
 console.log(beta - gamma - alpha)
@@ -36,15 +36,21 @@ let epsilon = 60
 console.log(epsilon / delta)
 // Create two odd numbers, assign them to variables and multiply one from the other
 
-let zeta = 11
-let theta = 21
+const zeta = 11
+const theta = 21
+
+//const answerOdd = zeta * theta
+// console.log(answerOdd)
 // Check it worked by logging to the console
 console.log(zeta * theta)
 // Create a variable and log it's remainder, if divided by 3, to the console 
 
-let kappa = 9
+const kappa = 9
 
 console.log(kappa % 3)
 // Answer in plain text, what is modulo especially useful for?
 
 // remainders of division,  finding out reminders of odd numbers that arent easily divisible into other whole numbers
+const value = Math.pow(4,4)
+console.log(value)
+//first number being the base second number being the exponent
