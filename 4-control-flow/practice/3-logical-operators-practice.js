@@ -21,7 +21,9 @@ else if(fName.length > 10){
 // Create the following if statement: 
 // If this month (1-12) is after March and before December, log 'Winter is Coming!'
  const month = 11
-
+if (month > 3 && month < 12) {
+    console.log ("winter is coming")
+}
 // Create two variables a & b initialized as numbers
 // Write the following if statement
 // If a is greater than b, log 'a is greater than b'
