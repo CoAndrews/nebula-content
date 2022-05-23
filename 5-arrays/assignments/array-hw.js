@@ -13,7 +13,7 @@ let daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Frida
 console.log(daysOfWeek.length);
 
 // 5.   log the 4th element in the array
-console.log(daysOfWeek[4])
+console.log(daysOfWeek[3])
 // 6.   Remove the first element in the array. Log the new array and the element removed from the array
 daysOfWeek.shift()
 
@@ -43,6 +43,8 @@ let laptop = ['MacBook', 'HP', 'Dell']
 phone.push(laptop)
 
 console.log(phone)
+
+//console.log(phone.concat(laptop);
 
 //13.   Write a line of code to test if something is an array or not
 

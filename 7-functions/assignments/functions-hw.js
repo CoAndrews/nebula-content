@@ -17,9 +17,14 @@ function repeatStr (text){
 repeatStr("Give it to me Baby!")
 // https://www.codewars.com/kata/55a2d7ebe362935a210000b2
 const arrNums = [34, -345, -1, 100]
-let min = Math.min(...arrNums)
-console.log(min)
 
+
+function lowestNum (array){
+    let min = Math.min(...array)
+    console.log(min)
+
+}
+lowestNum(arrNums)
 
 // //Spread Syntax
 // ""..."" will take either a string, array or object and spread out and layer it's elements into a data structure where possible (the function argument space included). This means that if those elements are primitive values, they will be copied.

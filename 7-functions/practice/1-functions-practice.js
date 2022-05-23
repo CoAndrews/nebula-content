@@ -50,8 +50,30 @@ function multipliesThreeTingz (beta,theta,alpha){
 multipliesThreeTingz(45,35,65)
 // 7. Write a function that takes in a number and logs all odd numbers leading up to that number
 
+
+oddNum=[]
+let myArray = [3, 4, 20, 11, 14, 15]
+function logOddNum (num){
+    for(let i = 0; i < num.length; i++){
+        if(num[i] %2!= 0){
+            oddNum.push(myArray[i])
+            console.log(oddNum)
+        }
+    }
+
+    }
+
+
+logOddNum(myArray)
+
 // 8. Write a function that takes in a list of names and returns a list of initials. The names will be formatted: 'Peter Parker'. 
 
+
+// const myInit = [];
+// for (i = 0; i < myFavCelebs.length; i++){
+//     celebFirstNames.push(myFavCelebs[i].split(" ")[0])
+// }
+// console.log(celebFirstNames)
 // 9. Write a function which takes in two numbers and a mathematical operator and performs Math on those two numbers utilizing that operator
 //function mathOpp (a,b)
 //10. Write a function which takes in two arrays and returns those arrays combined together.

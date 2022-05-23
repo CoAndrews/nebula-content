@@ -51,6 +51,8 @@ for (let i = 0; i < myFavCelebs.length; i++){
  }
    
 
+
+
 // 7.   Loop over the celebrity list and then loop through each name. 
 //      If a letter is a vowel, log it to the console
 const lNames = []
@@ -60,17 +62,42 @@ for (let i = 0; i < myFavCelebs.length; i++){
 console.log(lNames)
 // // 8.   Loop over the celebrity list and then loop through each name. 
 // //      If a letter is uppercase, log it to the console
+for (let i = 0; i < myFavCelebs.length; i++){
+    for (let j = 0; j < myFavCelebs[i].length; j++ ){
+        if (myFavCelebs[i][j] === "a" || myFavCelebs[i][j] === "e" || myFavCelebs[i][j] === "i" || myFavCelebs[i][j] === "o" || myFavCelebs[i][j] === "u" ){
+            console.log(myFavCelebs[i][j])
+        }else continue;
+    } 
+}
 
+
+for (let i = 0; i < myFavCelebs.length; i++){
+    for (let j=0; j < myFavCelebs[i].length; j++){
+        if (myFavCelebs[i][j] === myFavCelebs[i][j].toUpperCase()){
+            console.log(myFavCelebs[i][j])
+        }
+    }
+}
 // // 9.   Convert your celebrity array to all caps and no spaces:
 // //      Ex:
 // //        Input:  ['Martha Stewart', 'David Beckham', etc..] 
 // //        Output: ['MARTHA-STEWART', 'DAVID-BECKHAM', etc..]
-
+//if is a comparison statement
 // 10.  Index your array to find your favorite celebrity. 
 //      Save that name to a variable
 //      Loop over the array until you find that individual
 //      Log that name to the console and break out of the loop
+let celebsCap = (myFavCelebs.join("-").toUpperCase())
+console.log(celebsCap)
 
+let imansHusband = myFavCelebs[0]
+
+for (let i = 0; i < myFavCelebs.length; i++){
+    if (myFavCelebs[i] === imansHusband){
+        console.log(imansHusband)
+        break;
+    }
+}
 //BONUS:
 //      Write a loop that iterates from zero until 30
 //      If an index is divisible by 2 log 'fizz'
