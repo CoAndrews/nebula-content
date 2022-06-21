@@ -201,3 +201,47 @@ console.log(canDrink)
 // 5.   Write a function to filter out all letters from a string 
 //      Hint: filter doesn't work on strings..
 
+// .reduce()
+
+// 1.   Write a HOF to reduce an array of numbers to all the numbers added up
+const nums1 = [1,2,3,4,5]
+
+let outputNums1 = (nums1.reduce((accumulator, current) => accumulator + current))
+
+console.log(outputNums1)
+// 2.   Write a HOF to reduce all numbers in an array to all numbers multiplied together
+let outputNumsMulti = (nums1.reduce((accumulator, current) => accumulator * current))
+
+console.log(outputNumsMulti)
+// 3.   Write a HOF to reduce all numbers in an array to the largest number 
+const nums2 = [2,8,12,98,167,3]
+
+let nums2Median = (nums2.reduce((acc, curr) => Math.max(acc, curr) ))
+
+console.log(nums2Median)
+// 4.   Write a HOF to find the oldest person in a group
+const partyPeople2 = [{name: 'John', age: 25}, {name: 'Jordan', age: 18}, {name: 'Frank', age: 50}, {name: 'Anna', age: 12}]
+
+const oldFart = (partyPeople2.reduce((acc, cur) =>  Math.max((acc, cur.age))))
+
+console.log(oldFart)
+
+//.find()
+
+// 1.   Write a HOF to find the first number greater than 10 in an array
+const nums5 = [1,2,3,15, 4, 80, 34]
+
+const firstBig10 = nums5.find(el => el > 10);
+
+console.log(firstBig10)
+
+// 2.   Write a HOF to find the first string in an array
+const arr = [1,2,3,"pizza", "tacos","pie", {}, [], null, 123]
+
+const firstStr = arr.find(el => typeof (el) === "string")
+
+console.log(firstStr)
+// 3.   Write a HOF to find the first instance of null in an array 
+const firstNull = arr.find(el => typeof (el) === null)
+
+console.log(firstNull)
