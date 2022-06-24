@@ -222,8 +222,13 @@ console.log(nums2Median)
 // 4.   Write a HOF to find the oldest person in a group
 const partyPeople2 = [{name: 'John', age: 25}, {name: 'Jordan', age: 18}, {name: 'Frank', age: 50}, {name: 'Anna', age: 12}]
 
-const oldFart = (partyPeople2.reduce((acc, cur) =>  Math.max((acc, cur.age))))
-
+const oldFart = partyPeople2.reduce((accumulator, currentValue) => 
+{
+    if(currentValue.age > accumulator.age){
+        accumulator = currentValue.age
+    }
+    return accumulator;
+})
 console.log(oldFart)
 
 //.find()
@@ -245,3 +250,30 @@ console.log(firstStr)
 const firstNull = arr.find(el => typeof (el) === null)
 
 console.log(firstNull)
+
+
+// .sort()
+
+// 1.   Write a HOF to sort an array of numbers from largest to smallest
+const numy = [1,25,6,3,88,45,0]
+
+numy.sort((a, b) => a < b ? 1 : -1);
+console.log(numy)
+
+
+// 2.   Write a HOF to sort peoples names by their length
+const ppl = [{name: 'John', age: 25}, {name: 'Jordan', age: 18}, {name: 'Frank', age: 50}, {name: 'Anna', age: 12}]
+
+ppl.sort((a, b) => (a.name.length > b.name.length) ? 1 : -1)
+
+ console.log(ppl)
+// 3.   Write an HOF to sort an array of objects of people by their age youngest to oldest
+ppl.sort((a, b) =>(a.age > b.age) ? 1 : -1);
+
+console.log(ppl)
+// 4.   Write an HOF to sort an array of strings by the last letter of the string
+const strings = ['sam', 'john', 'daniel', 'vanessa']
+//using .charCodeAt method
+strings.sort((a, b) => a.charCodeAt(a.length -1)- b.charCodeAt(b.length -1));
+
+console.log(strings)
