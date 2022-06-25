@@ -83,6 +83,17 @@ const people1 = [
     { name: "Sasha", age: 65 },
     { name: "Tim", age: 25 },
     ];
+//.sort & .filter
+    people1.sort((a,b) => (a.age > b.age) ? 1 : -1);
+
+    console.log(people1)
+
+    const youngBabies = people1.filter(people => people.age > 20 && people.age < 35 );
+    
+
+    console.log(youngBabies)
+    
+    
 
 
 // 8.   Given an array of objects, each object is a food, including an expiration date
@@ -99,3 +110,9 @@ const food = [
     { name: "Eggs", exp: new Date(2021, 11, 28) },
     { name: "Bread", exp: new Date(2021, 11, 20) },
 ];
+//.sort
+
+food.sort((a, b) => a.exp - b.exp)
+console.log(food[0].name + " " + "expiration:" + food[0].exp.toDateString())
+
+//console.log(food[2].exp.toDateString())
