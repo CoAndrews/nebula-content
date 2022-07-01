@@ -52,5 +52,23 @@ function changeText(){
 }
 
 let textPromise = changeText(true);
-
 textPromise.then(sucess => console.log(sucess)).catch(error => console.log(error))
+
+
+const button = document.getElementById('btn');
+
+function changeButton(){
+    return new Promise((res, rej) => {
+        setTimeout(()=>{
+            if(button.style.backgroundColor){
+                res(button.style.backgroundColor = "yellow")
+            } else {
+                rej(button.style.backgroundColor = "black")
+            }
+
+        }, 5000)
+    })
+}
+
+let buttonPromise = changeButton(false);
+buttonPromise.then(sucess => console.log(sucess)).catch(error => console.log(error));

@@ -67,23 +67,23 @@ let textPromise = changeText(true);
 
 textPromise.then(sucess => console.log(sucess)).catch(error => console.log(error))
 
-// 7. What is the output of the following code?
-// const promise = new Promise(res => res(2));
-// promise.then(v => {
-//     console.log(v);
-//     return v * 2;
-// })
-// .then(v => {
-//     console.log(v);
-//     return v * 2;
-// })
-// .then(v => {
-//     console.log(v);
-//     return v * 2;
-// })
-// .finally(v => {
-//     console.log(v)
-// })
+ //7. What is the output of the following code?
+ const promise = new Promise(res => res(2));
+promise.then(v => {
+    console.log(v);
+    return v * 2;
+ })
+ .then(v => {
+     console.log(v);
+     return v * 2;
+ })
+ .then(v => {
+     console.log(v);
+     return v * 2;
+ })
+ .finally(v => {
+     console.log(v)
+ })
 
-// // 2
-// // 4
+// 2, 4, 8, 16
+// we are storing a new promise in the variable promise, this is only passing in the resolve method and its return the resolve with the value of two and we are calling that promise, passing in the value 

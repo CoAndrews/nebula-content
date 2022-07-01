@@ -18,9 +18,9 @@ form.addEventListener("submit", function(event){
     ("div")
     idCard.appendChild(image)
 
-    const nameEL = document.createElement
+    const fnameEL = document.createElement
     ("h5")
-    idCard.appendChild(nameEL)
+    idCard.appendChild(fnameEL)
     const dobEL = document.createElement
     ("p")
     idCard.appendChild(dobEL)
@@ -32,7 +32,7 @@ form.addEventListener("submit", function(event){
     idCard.appendChild(placeOfBirthEL)
 
     //Adding the user info to the innerText of the ID card elements
-    nameEL.innerText = `Name: ${fname.value}`
+    fnameEL.innerText = `Name: ${fname.value}`
     dobEL.innerText = `DOB: ${dob.value}`
     ssnEL.innerText =`SSN: ${ssn.value}`
     placeOfBirthEL.innerText = `Country of Origin: ${placeOfBirth.value}`
