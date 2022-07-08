@@ -47,9 +47,7 @@ function hasUpper(str){
 
 // 6.   Write a function that checks if a string contains a dash or underscore 
 /*
-function hasHt(str){
-    return Boolean(str.match(/^(http|https):\/\//))
-}
+
 */
 
 // 7.   Write a function that utilizes regex to check if a string contains '.com' at the end
