@@ -34,3 +34,5 @@ const button = document.getElementById('taketh')
  let dissapear = takethAway(true);
  dissapear.then(sucess => console.log(sucess)).catch(error => console.log(error))
 
+//how to use math.random for promises running in a asyncronus fashion so
+//depending on whenver you refresh the page your outcome will be different

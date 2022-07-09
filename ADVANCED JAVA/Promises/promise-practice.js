@@ -101,3 +101,5 @@ function changeButton(){
 
 const button = document.getElementById('btn')
 let player1HitPoints = 12
+
+
