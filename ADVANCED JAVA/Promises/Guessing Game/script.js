@@ -1,11 +1,17 @@
+const userNum = document.getElementById('userGuess');
+
+
+
 //function enterNum thats returning a promise based 
 //on the user entering a number based on a prompt the window will give
 function enterNum(){
     return new Promise((res, rej) => {
         random = Math.floor(Math.random() * 70 +1)
-        userInput = prompt("Enter a Number Between 1-70... and Get Fucked!");
+        //userInput = prompt("Enter a Number Between 1-70... ");
+        let userInput = userNum.value;
+        console.log(userInput)
         if(typeof(userInput) === NaN){
-            rej("Not Valid DipShit!")
+            rej("Not Valid DipSh*t!")
         } 
         if(userInput === random){
             res({
@@ -41,7 +47,7 @@ function continueGame (){
 
 function runGame(){
     enterNum().then((result) => {
-        alert(`you have ${result.point} points, and the random number is ${random}`);
+        pointsBin.innerText = `you have ${result.point} points, and the random number is ${random}`;
         continueGame()
         .then((result) =>{
             if(result){
@@ -53,4 +59,4 @@ function runGame(){
     })
 }
 
-runGame();
+//runGame();
