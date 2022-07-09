@@ -87,3 +87,17 @@ promise.then(v => {
 
 // 2, 4, 8, 16
 // we are storing a new promise in the variable promise, this is only passing in the resolve method and its return the resolve with the value of two and we are calling that promise, passing in the value 
+
+function changeButton(){
+    return new Promise((res, rej) =>{
+        if(player1HitPoints <= 15){
+            res(button.style.backgroundColor = 'red')
+        }else {
+            rej(button.style.backgroundColor = 'green')
+        }
+    })
+
+}
+
+const button = document.getElementById('btn')
+let player1HitPoints = 12
